@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shravani Portfolio</title>
+
+<style>
+:root {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card: #ffffff;
+  --accent: #6366f1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+/* HERO */
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+}
+
+header p {
+  max-width: 600px;
+  margin: auto;
+  color: #475569;
+}
+
+/* ABOUT */
+.about {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.about img {
+  width: 160px;
+  border-radius: 50%;
+  margin: 20px 0;
+  border: 4px solid var(--accent);
+}
+
+/* TAG BUTTONS */
+.tags {
+  text-align: center;
+  padding: 30px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 6px;
+  background: #e0e7ff;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* SKILLS */
+.skills {
+  text-align: center;
+  padding: 40px;
+}
+
+.skill {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: #0f172a;
+  color: white;
+}
+
+/* PROJECTS */
+.projects {
+  padding: 50px;
+  text-align: center;
+}
+
+.project-card {
+  display: inline-block;
+  background: var(--card);
+  margin: 15px;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  border: 2px solid #e0e7ff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+/* CERTIFICATES */
+.certificates {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.cert {
+  min-width: 200px;
+  background: var(--card);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.cert img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>My Portfolio</h2>
+</nav>
+
+<header>
+  <h1>Hi, I'm Shravani 👋</h1>
+  <p>
+    A creative front-end developer studying at MITAOE, Pune —
+    building websites that are as beautiful as they are functional
+  </p>
+</header>
+
+<!-- ABOUT -->
+<section class="about">
+  <!-- Replace with your image file -->
+  
+  <h2>Who am I?</h2>
+
+  <p>
+    Hello, I am Shravani 👋 I'm a front-end developer in the making —
+    currently studying at MIT Academy of Engineering, Pune.
+    I believe great websites live at the intersection of clean code and stunning design.
+  </p>
+
+  <p>
+    I transform raw ideas into digital experiences using HTML, C++ and Python.
+    When I'm not building, I am exploring new tech, reading or deep in doom-scroll spiral.
+  </p>
+</section>
+
+<!-- TAGS -->
+<section class="tags">
+  <span class="tag">2+ Projects</span>
+  <span class="tag">4 Languages</span>
+  <span class="tag">Curiosity 🚀</span>
+</section>
+
+<!-- SKILLS -->
+<section class="skills">
+  <h2>What I Know</h2>
+  <span class="skill">HTML</span>
+  <span class="skill">CSS</span>
+  <span class="skill">Python</span>
+  <span class="skill">C++</span>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects">
+  <h2>What I Have Built</h2>
+
+  <div class="project-card" >
+    <h3>Foundation Chem Software</h3>
+  </div>
+
+  <div class="project-card" >
+    <h3>Portfolio</h3>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section>
+  <h2 style="text-align:center;">Achievements</h2>
+
+  <div class="certificates">
+
+    <div class="cert">
+      
+      <p>IBM Career Management Essentials</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>IBM Learn JavaScript (Codeacademy)</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>IBM Artificial Intelligence Fundamentals</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>Cisco Python Essentials 1</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>Cisco Python Essentials 2</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>Anthropic AI Fluency for Students</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>Anthropic AI for Non-Profits</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>Nasscom Digital 101</p>
+    </div>
+
+  </div>
+</section id="contact">
+<h2>Contact Me</h2>
+<p>Feel free to reach out to me for collaborations or projects</p>
+<div class="contact-info">
+  <p><strong>Email:</strong>belsareshravani44@gmail.com</p>
+</div>
+
+
+<footer>
+  © 2026 Shravani
+</footer>
+
+<script>
+function openPDF(file) {
+  window.open(file, "_blank");
+}
+</script>
+
+</body>
+</html>
