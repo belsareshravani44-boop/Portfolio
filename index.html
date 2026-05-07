@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shravani Portfolio</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#f8fafc;
+  --text:#0f172a;
+  --card:#ffffff;
+  --accent:#6366f1;
+  --light:#e0e7ff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:white;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+nav h2{
+  color:var(--accent);
+}
+
+/* HERO */
+
+header{
+  text-align:center;
+  padding:100px 20px;
+  background:linear-gradient(135deg,#e0e7ff,#f8fafc);
+}
+
+.name{
+  font-family:'Pacifico',cursive;
+  font-size:65px;
+  background:linear-gradient(90deg,#6366f1,#ec4899,#06b6d4);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:20px;
+}
+
+header p{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+  color:#475569;
+}
+
+/* ABOUT */
+
+.about{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  padding:70px 20px;
+}
+
+.about img{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid var(--accent);
+  margin-bottom:25px;
+}
+
+.about h2{
+  margin-bottom:20px;
+  color:var(--accent);
+}
+
+.about p{
+  margin-bottom:20px;
+  font-size:17px;
+  color:#334155;
+}
+
+/* CATEGORY */
+
+.category{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.category h2{
+  margin-bottom:30px;
+  color:var(--accent);
+}
+
+.category-card{
+  max-width:550px;
+  margin:auto;
+  background:white;
+  border-radius:18px;
+  padding:30px;
+  border:2px solid #e0e7ff;
+  transition:0.3s;
+}
+
+.category-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--accent);
+}
+
+.category-card img{
+  width:100px;
+  margin-bottom:20px;
+}
+
+.category-card p{
+  color:#475569;
+}
+
+/* TAGS */
+
+.tags{
+  text-align:center;
+  padding:50px 20px;
+}
+
+.tag{
+  display:inline-block;
+  padding:12px 20px;
+  margin:8px;
+  background:#e0e7ff;
+  color:#312e81;
+  border-radius:25px;
+  font-weight:600;
+}
+
+/* SKILLS */
+
+.skills{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.skills h2{
+  margin-bottom:25px;
+  color:var(--accent);
+}
+
+.skill{
+  display:inline-block;
+  background:#0f172a;
+  color:white;
+  padding:12px 22px;
+  margin:10px;
+  border-radius:30px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.skill:hover{
+  background:var(--accent);
+  transform:scale(1.05);
+}
+
+/* PROJECTS */
+
+.projects{
+  padding:70px 20px;
+  text-align:center;
+}
+
+.projects h2{
+  margin-bottom:30px;
+  color:var(--accent);
+}
+
+.project-container{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:25px;
+}
+
+.project-card{
+  background:white;
+  width:280px;
+  padding:30px;
+  border-radius:18px;
+  border:2px solid #e2e8f0;
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.project-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--accent);
+  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.project-card h3{
+  margin-bottom:10px;
+}
+
+/* CERTIFICATES */
+
+.achievements{
+  padding:70px 20px;
+}
+
+.achievements h2{
+  text-align:center;
+  margin-bottom:30px;
+  color:var(--accent);
+}
+
+.certificates{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  padding-bottom:10px;
+}
+
+.cert{
+  min-width:220px;
+  background:white;
+  border-radius:18px;
+  padding:15px;
+  border:1px solid #e2e8f0;
+  transition:0.3s;
+}
+
+.cert:hover{
+  transform:translateY(-5px);
+}
+
+.cert img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:12px;
+}
+
+.cert p{
+  font-size:14px;
+  font-weight:500;
+  color:#334155;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:25px;
+  color:#64748b;
+  margin-top:40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .name{
+    font-size:45px;
+  }
+
+  nav{
+    padding:20px;
+  }
+
+  header{
+    padding:80px 20px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+  <h2>My Portfolio</h2>
+</nav>
+
+<!-- HERO -->
+
+<header>
+
+  <h1 class="name">Shravani Belsare</h1>
+
+  <p>
+    A creative front-end developer studying at MITAOE, Pune —
+    building websites that are as beautiful as they are functional.
+  </p>
+
+</header>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+  <!-- ADD YOUR IMAGE -->
+  
+
+  <h2>Who Am I?</h2>
+
+  <p>
+    Hello, I am Shravani 👋 I'm a front-end developer in the making —
+    currently studying at MIT Academy of Engineering, Pune.
+    I believe great websites live at the intersection of clean code and stunning design.
+  </p>
+
+  <p>
+    I transform raw ideas into digital experiences using HTML, C++ and Python.
+    When I'm not building, I am exploring new tech, reading or deep in doom-scroll spiral.
+  </p>
+
+</section>
+
+<!-- CATEGORY -->
+
+<section class="category">
+
+  <h2>Beyond Coding ✨</h2>
+
+  <div class="category-card">
+
+    <!-- ADD KATHAK IMAGE -->
+    
+
+    <h3>Kathak Graduate</h3>
+
+    <p>
+      Along with technology, I am also a graduate in Kathak —
+      a classical Indian dance form that taught me discipline,
+      creativity and expression through art.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- TAGS -->
+
+<section class="tags">
+
+  <span class="tag">2+ Projects</span>
+  <span class="tag">4 Languages</span>
+  <span class="tag">Curiosity 🚀</span>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="skills">
+
+  <h2>What I Know</h2>
+
+  <span class="skill">HTML</span>
+  <span class="skill">CSS</span>
+  <span class="skill">Python</span>
+  <span class="skill">C++</span>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="projects">
+
+  <h2>What I Have Built</h2>
+
+  <div class="project-container">
+
+    <div class="project-card" >
+      <h3>Foundation Chem Software</h3>
+      <p>Interactive chemistry learning and revision platform.</p>
+    </div>
+
+    <div class="project-card" >
+      <h3>Portfolio Website</h3>
+      <p>Creative responsive portfolio using HTML, CSS & JavaScript.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section class="achievements">
+
+  <h2>Achievements & Certifications</h2>
+
+  <div class="certificates">
+
+    <div class="cert">
+      
+      <p>IBM Career Management Essentials</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>IBM Learn JavaScript - Codeacademy</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>IBM Artificial Intelligence Fundamentals</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>Cisco Python Essentials - 1</p>
+    </div>
+
+    <div class="cert">
+     
+      <p>Cisco Python Essentials - 2</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>Anthropic AI Fluency for Students</p>
+    </div>
+
+    <div class="cert">
+      
+      <p>Anthropic AI for Non Profits</p>
+    </div>
+
+    <div class="cert">
+         <p>Nasscom Digital 101</p>
+    </div>
+
+  </div>
+
+</section>
+<section>
+  <h2>Contact Me</h2>
+  <p>Email - belsareshravani44@gmail.com</p>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  © 2026 Shravani Belsare | Designed with Creativity ✨
+</footer>
+
+<script>
+
+function openPDF(file){
+  window.open(file, "_blank");
+}
+
+</script>
+
+</body>
+</html>
